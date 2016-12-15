@@ -1,4 +1,4 @@
-package se.hedefalk.argonautlift
+package se.hedefalk
 
 import net.liftweb.common.Box
 import net.liftweb.http.provider.HTTPCookie
@@ -31,9 +31,6 @@ package argonautlift {
       new ArgonautResponse(json, headers, cookies, 200)
 
   }
-}
-
-package argonautlift {
 
   trait ArgonautRestHelper {
     self: RestHelper =>

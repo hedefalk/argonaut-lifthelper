@@ -6,9 +6,8 @@ object CrmBuild extends Build {
 
   override lazy val settings = super.settings ++ Seq(
     organization := "se.hedefalk.argonautlift",
-    name := "argonaut-resthelper",
     scalaVersion := "2.11.7",
-    version := "0.1",
+    version := "0.2",
     
     scalacOptions in Compile ++= Seq(
       "-encoding", "UTF-8",
@@ -26,7 +25,7 @@ object CrmBuild extends Build {
     publishTo := Some("Wooden Stake Releases" at "https://repo.woodenstake.se/content/repositories/releases/")
   )
   
-  lazy val root = Project("root", file(".")) settings (
+  lazy val root = Project("argonaut-resthelper", file(".")) settings (
     libraryDependencies ++= List(
       "io.argonaut" %% "argonaut" % "6.1-M4" % "provided" ,
       "net.liftweb" %% "lift-webkit" % "3.0-M8" % "provided" 
